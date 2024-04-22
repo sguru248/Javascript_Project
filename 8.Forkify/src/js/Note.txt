@@ -1,0 +1,101 @@
+
+
+////////
+M-model , V-view , C-controller
+////___Event Handlers in MVC :Publisher Subscriber Patter____/////
+
+
+Publisher-Subscriber Design Pattern:
+   Design Pattern in the Programming are basically standard Solution to certain kind of Problems
+
+   We have a 'Publisher' Which is Some code that knows When to react .(In this case addhandlerRender() Method It will contain addEventListener Method from recipeView module)
+
+   other Hand We have 'Subscriber' Which is code that actually want to react.( In this case controlRecipes() function from controller Modules )
+
+   Publisher doesn't know Subscriber really Exist
+
+   It is allow us to keep the Handler in the controller , and to listener in the view
+
+   In summery, the handler subscribes to the publisher(Which is listener in this case ),the Publisher publishes an event , the Subscriber is executed.
+
+////////
+   
+
+   Note:
+
+   1. There is standard way of writing a documentation called JSDoc
+
+////
+
+
+////____When we just developing___//////
+
+  1) we use (npm run start)  
+
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+
+  Actually we delet the "main"
+
+
+  {
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "main" : "index.html"                                                       // we delete this file
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"                // Here we have specifiy distribution directer and folder name
+  },
+  "author": "Sivaguru",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "core-js": "^3.37.0",
+    "fractional": "^1.0.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
+
+
+////____When we bundiling___//////
+
+=> this is make bundel 
+=> then we ready to deploy it to netflity server 
+
+1) we use (npm run build)  
+
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+
+ Actually we change the "main" to "default"
+
+
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "default": "index.html",                      //Changing "main" into "default"
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Sivaguru",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "core-js": "^3.37.0",
+    "fractional": "^1.0.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
