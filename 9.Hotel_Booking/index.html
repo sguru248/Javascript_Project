@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Room Booking</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Hotel Room Booking</h1>
+    </header>
+    <main>
+      <div class="form-container">
+        <form id="bookingForm">
+          <ul>
+            <li class="type-room">
+              <p>
+                <label for="roomType">Type of Room:</label>
+                <select id="roomType">
+                  <option value="basic">Basic</option>
+                  <option value="deluxe">Deluxe</option>
+                  <option value="suite">Suite</option></select
+                ><br />
+              </p>
+
+              <p>
+                <button type="button" id="previewBtn" onclick="previewRooms()">
+                  Preview Rooms</button
+                ><br /><br />
+              </p>
+            </li>
+            <li>
+              <label for="fromDate">From Date:</label>
+              <input type="date" id="fromDate" /><br /><br />
+            </li>
+            <li>
+              <label for="toDate">To Date:</label>
+              <input type="date" id="toDate" /><br /><br />
+            </li>
+            <li>
+              <label>Include Breakfast:</label>
+              <input type="radio" name="breakfast" value="yes" /> Yes
+              <input type="radio" name="breakfast" value="no" checked />
+              No<br /><br />
+            </li>
+            <li>
+              <div id="costEstimate">
+                <div id="cost">
+                  <!-- <h3>Cost Estimate:</h3>
+                  <p>Type of Room:</p>
+                  <p>No of Days:</p>
+                  <p>Total coast:</p> -->
+                </div>
+              </div>
+              <br />
+            </li>
+            <li><button type="submit" class="btn">Book Now</button></li>
+          </ul>
+        </form>
+        <br />
+      </div>
+
+      <div class="image-container">
+        <div id="roomPhotos" class="photos" style="display: none">
+          <!-- <img src="./Asset/image-1.jpg" alt="Basic Room" />
+                <img src="./Asset/image-2.jpg" alt="Deluxe Room" />
+                <img src="./Asset/image-3.jpg" alt="Suite Room" /> -->
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h1>Contact</h1>
+    </footer>
+  </body>
+</html>
